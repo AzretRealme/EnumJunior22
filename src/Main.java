@@ -1,34 +1,38 @@
 import child.*;
-import parent.Employee;
+
+import static parent.Rank.*;
 
 public class Main {
     public static void main(String[] args){
 
-
-        Employee[] arr = new Employee[] {
-                new Manager(" Имя: - Mark", 32, 45000), new Manager(" Имя: - Katcher", 30, 25000),
-                new Developer(" Имя: - Casa", 23, 30000), new Developer(" Имя: - John", 29, 80000),
-                new Developer(" Имя: - Maddison ", 24, 30000), new Developer(" Имя: - Margaret", 23, 30000),
-                new Specialist(" Имя: - Carl", 28, 25000), new Specialist(" Имя: - Shown", 29, 25000),
-                new Specialist(" Имя: - Kane", 27, 25000), new CEO(" Имя: - Bruce", 35, 30000)
-        };
-
-        for(Employee easyItCompany: arr){
-            easyItCompany.goToVacation();
+            Developer[] developers = new Developer[]{new Developer("I am Junior Developer", JUNIOR),
+                    new Developer("I am Senior Developer", SENIOR),
+                    new Developer("I am Middle Developer", MIDDLE),
+                    new Developer("I am Teamlead Developer", TEAMLEAD)};
+            printDeveloperGrade(developers);
         }
-        for(Employee easyItCompany: arr){
-            easyItCompany.goToDayOff();
-        }
+        public  static void printDeveloperGrade(Developer[] developers) {
 
-        /*
-        Интеллект - это способность избегать выполнения работы,
-             но так, чтобы она при это была сделана.
+            for (Developer java : developers) {
 
-        /*
-        Интеллект - это способность избегать выполнения работы,
-             но так, чтобы она при это была сделана.
-                -------- Linux T.
-         */
+                switch (java.getRank()) {
+                    case JUNIOR:
+                        System.out.println("I am Junior developer");
+                        break;
+                    case SENIOR:
+                        System.out.println("I am Senior developer");
+                        break;
+                    case MIDDLE:
+                        System.out.println("I am Middle developer");
+                        break;
+                    case TEAMLEAD:
+                        System.out.println("I am Teamlead developer");
+                        break;
+                    default:
+                        System.out.println("THE END");
+                        break;
+                }
+            }
 
     }
 }
