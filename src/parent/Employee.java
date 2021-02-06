@@ -2,7 +2,6 @@ package parent;
 
 public abstract class Employee {
 
-    private String phrase;
     private Rank rank;
 
 
@@ -10,13 +9,8 @@ public abstract class Employee {
 
     }
 
-    public Employee(String phrase, Rank rank) {
-        this.phrase = phrase;
+    public Employee(Rank rank) {
         this.rank = rank;
-    }
-
-    public String getPhrase() {
-        return phrase;
     }
 
     public Rank getRank() {
