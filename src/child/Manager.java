@@ -2,6 +2,7 @@ package child;
 
 import parent.Employee;
 import parent.Rank;
+import parent.Sphere;
 
 public class Manager extends Employee {
 
@@ -11,8 +12,8 @@ public class Manager extends Employee {
 
     }
 
-    public Manager(Rank rank, String name, int age, double salary) {
-        super(rank, name, age, salary);
+    public Manager(Rank rank, Sphere sphere, String name, int age, double salary) {
+        super(rank, sphere, name, age, salary);
     }
 
     public boolean isHasStocks() {

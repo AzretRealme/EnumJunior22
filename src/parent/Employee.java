@@ -3,9 +3,18 @@ package parent;
 public abstract class Employee {
 
     private Rank rank;
-    String name;
-    int age;
-    double salary;
+    private Sphere sphere;
+    private String name;
+    private int age;
+    private double salary;
+
+    public Sphere getSphere() {
+        return sphere;
+    }
+
+    public void setSphere(Sphere sphere) {
+        this.sphere = sphere;
+    }
 
     public void setRank(Rank rank) {
         this.rank = rank;
@@ -39,8 +48,9 @@ public abstract class Employee {
 
     }
 
-    public Employee(Rank rank, String name, int age, double salary) {
+    public Employee(Rank rank, Sphere sphere, String name, int age, double salary) {
         this.rank = rank;
+        this.sphere = sphere;
         this.name = name;
         this.age = age;
         this.salary = salary;

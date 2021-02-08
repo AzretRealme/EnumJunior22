@@ -4,6 +4,7 @@ package child;
 
 import parent.Employee;
 import parent.Rank;
+import parent.Sphere;
 
 public class Specialist extends Employee {
 
@@ -13,8 +14,8 @@ public class Specialist extends Employee {
 
     }
 
-    public Specialist(Rank rank, String name, int age, double salary) {
-        super(rank, name, age, salary);
+    public Specialist(Rank rank, Sphere sphere, String name, int age, double salary) {
+        super(rank, sphere, name, age, salary);
     }
 
     public int getLevels() {

@@ -1,18 +1,14 @@
 package parent;
 
 public enum Rank {
-    JUNIOR(" I am Junior Developer - Java "),
-    MIDDLE(" I am Senior Developer - C++ "),
+    JUNIOR(" I am Junior Developer "),
+    MIDDLE(" I am Senior Developer "),
 
-    SENIOR(" I am Middle Developer - Python "),
+    SENIOR(" I am Middle Developer "),
 
-    TEAMLEAD(" I am Teamlead Developer - JavaScript ");
+    TEAMLEAD(" I am Teamlead Developer ");
 
     String phrase;
-
-    Rank() {
-
-    }
 
     Rank(String phrase) {
         this.phrase = phrase;

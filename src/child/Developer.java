@@ -3,25 +3,13 @@ package child;
 import parent.*;
 
 public class Developer extends Employee {
-    String grades;
-    public Developer() {
 
-    }
-
-    public Developer(Rank rank, String name, int age, double salary) {
-        super(rank, name, age, salary);
-    }
-
-    public String getGrades() {
-        return grades;
-    }
-
-    public void setGrades(String grades) {
-        this.grades = grades;
+    public Developer(Rank rank, Sphere sphere, String name, int age, double salary) {
+        super(rank, sphere, name, age, salary);
     }
 
     public void writeCode(){
-        // super.Work();
+
         System.out.println(" Developers - good made games.  " + " -WriteCode.  ---" + getName() +
                 ", ЗАРПЛАТА: " + getSalary() + ", ВОЗРАСТ: " + getAge());
     }
@@ -35,6 +23,6 @@ public class Developer extends Employee {
     }
 
     public void printDeveloperGrade(){
-        System.out.println(getName());
+        System.out.println(getRank() + " " + getSphere());
     }
 }
