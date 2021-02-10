@@ -1,5 +1,7 @@
 import child.*;
+import parent.Rank;
 import parent.Sphere;
+import java.lang.Enum;
 
 import static parent.Rank.*;
 
@@ -17,9 +19,13 @@ public class Main {
             develop.goToVacation();
         }
 
-        for (Developer develop : developers) {
-           printDeveloperGrade(develop);
-
+        for (Rank s : Rank.values()) {
+            System.out.println(s);
+            s.printPhrase();
+        }
+        for(Sphere s2 : Sphere.values()){
+            System.out.println(s2);
+            s2.printPhrase();
         }
 
     }

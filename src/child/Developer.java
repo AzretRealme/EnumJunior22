@@ -4,21 +4,57 @@ import parent.*;
 
 public class Developer extends Employee {
 
-    public Developer(Rank rank, Sphere sphere, String name, int age, double salary) {
-        super(rank, sphere, name, age, salary);
+    private Rank rank;
+    private Sphere sphere;
+    private String name;
+    private int age;
+    private double salary;
+
+    public Developer(){
+
+    }
+    public Developer(Rank rank, Sphere sphere, String name, int age, double salary){
+        this.rank = rank;
+        this.sphere = sphere;
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+
     }
 
-    public void writeCode(){
+    public Sphere getSphere() {
+        return sphere;
+    }
 
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public double getSalary() {
+        return salary;
+    }
+
+    public Rank getRank() {
+        return rank;
+    }
+
+    public void writeCode() {
+        // super.Work();
         System.out.println(" Developers - good made games.  " + " -WriteCode.  ---" + getName() +
                 ", ЗАРПЛАТА: " + getSalary() + ", ВОЗРАСТ: " + getAge());
     }
-
-    public void goToDayOff(){
+    public void goToDayOff() {
         System.out.println("Разработчики, Отдохните от своих компьютеров! ");
     }
 
-    public void goToVacation(){
+    public void goToVacation() {
         System.out.println("Developers say:  I am going to bootcamp! ");
     }
 

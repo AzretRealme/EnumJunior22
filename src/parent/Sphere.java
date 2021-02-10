@@ -14,5 +14,6 @@ public enum Sphere {
     }
     public void printPhrase(){
         System.out.println(this.phrase);
+        //return true;
     }
 }
